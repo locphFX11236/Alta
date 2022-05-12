@@ -1,4 +1,4 @@
-type GreetProps = {
+type BaseProps = {
     string: string,
     number: number,
     boolean: boolean,
@@ -17,14 +17,14 @@ type GreetProps = {
 const isTrue = (b: boolean) => {
     let r;
     if (b) {
-        r = 'True';
+        r = 'T';
     } else {
-        r = 'False';
+        r = 'F';
     };
     return r
 };
 
-export const Greet = (props: GreetProps) => {
+export const Base = (props: BaseProps) => {
     return (
         <div>
             <h2>Welcome to TS!</h2>
