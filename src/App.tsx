@@ -1,6 +1,6 @@
 import './App.css';
-import { ThemeContextProvider } from './components/context/themeContext';
-import { Box } from './components/context/Box';
+import { ThemeContextProvider } from './components/useContext/themeContext';
+import { Box } from './components/useContext/Box';
 // import { Base } from './components/baseprops';
 
 function App() {

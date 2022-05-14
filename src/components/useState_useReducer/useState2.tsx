@@ -9,6 +9,7 @@ export const User = () => {
     
     // // < AuthUser | null >(null) -> Thiết lập giá trị hiện tại là <null>, và trong giá trị sau đó theo <AuthUser>
     // const [user, setUser] = useState< AuthUser | null >(null);
+    
     // {} as AuthUser -> object rỗng hay có giá trị giống như AuthUser
     const [user, setUser] = useState< AuthUser >({} as AuthUser);
 
