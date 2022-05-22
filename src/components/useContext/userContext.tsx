@@ -6,7 +6,7 @@ type AuthUser = {
 };
 type UserContextType = {
     user: AuthUser | null,
-    setUser: React.Dispatch< React.SetStateAction<AuthUser | null> >
+    setUser: React.Dispatch< React.SetStateAction<AuthUser | null> > // Hành động dispatch, hành động thay đổi state
 };
 type UserContextProviderProps = {
     children: React.ReactNode

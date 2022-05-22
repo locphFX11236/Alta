@@ -25,3 +25,7 @@ export class Counter extends Component< CounterProps, CounterState > { // < Coun
         )
     };
 };
+
+/* Sử dụng
+    <Counter message='This is a message' />
+*/

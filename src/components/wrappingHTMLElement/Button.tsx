@@ -3,15 +3,17 @@ import React from "react";
 type ButtonProps = {
     variant: 'primary' | 'secondary'
     children: string
-} & Omit<React.ComponentProps<'button'>, 'children'> // Trong button component bỏ qua props children
+} // Các props ta quy định
+& Omit<React.ComponentProps<'button'>, 'children'> // Trong button component của React không xem children là 1 props
 
 export const Button = ({ variant, children, ...rest }: ButtonProps) => {
-    return <button 
-        className={`class-with-${variant}`}
-        { ...rest }
-    >{children}
-    </button>
-    // Khi không lấy props children có nghĩa ta bao bọc children bởi element button
+    return (
+        <button 
+            className={`class-with-${variant}`}
+            { ...rest }
+        >{children} /** Khi không lấy props children có nghĩa ta không cần bao bọc children bởi tag div */
+        </button>
+    );
 };
 
 /* Sử dụng

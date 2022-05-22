@@ -1,13 +1,13 @@
 import React from "react";
 
-type TextOwnProps<E extends React.ElementType> = {
+type TextOwnProps<E> = {
     size?: 'sm' | 'md' | 'lg',
     color?: 'primary' | 'secondary',
     children: React.ReactNode,
     as?: E // Sẽ nhận giá trị là các tag h1, h2, ...
 };
 
-type TextProps<E extends React.ElementType> =
+type TextProps<E extends React.ElementType> = // ElementType là loại element như h1, h2, div, p,...
     TextOwnProps<E> &
     Omit<
         React.ComponentProps<E>,
@@ -22,7 +22,7 @@ export const Text = <E extends React.ElementType = 'div'>({ size, color, childre
     );
 };
 
-/*
+/* Sử dụng
     <Text as='h1' htmlFor='someId' size='sm' color='secondary'>
         AAA
     <Text/>

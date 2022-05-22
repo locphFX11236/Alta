@@ -4,7 +4,7 @@ type ListProps<T> = {
 };
 
 export const List =    
-    <T extends {}>( // T được định nghĩa là 1 object các giá trị còn lại kiểu tùy ý
+    <T extends {}>( // T được định nghĩa là 1 object rỗng nên các giá trị trong object kiểu tùy ý
         { items, onClick }: ListProps<T>
     ) => {
         return (
@@ -19,6 +19,6 @@ export const List =
 ;
 
 /* Sử dụng
-    {const data = T[] // T là array của string, number, object }
+    {const data = T[] // T là array của string, number, object, array }
     <List items={data} onClick={(item) => console.log(item)} />
 */
